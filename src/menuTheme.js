@@ -23,7 +23,7 @@ function toggleClass(e) {
 }
 
 function makeCookie(e) {
-  let flag = refs.switch.checked;
+  let flag = refs.themeButton.checked;
 
   if (flag) {
     localStorage.setItem('theme', Theme.DARK);
