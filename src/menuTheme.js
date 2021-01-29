@@ -8,11 +8,12 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-refs.themeButton.addEventListener('change', toggleClass, makeCookie);
-console.log(refs.themeButton);
+refs.themeButton.addEventListener('change', toggleClass);
+refs.themeButton.addEventListener('change', makeCookie);
+
 function toggleClass(e) {
   let flag = refs.themeButton.checked;
-
+  console.log(refs.themeButton.checked);
   if (flag) {
     refs.body.classList.add(Theme.DARK);
     refs.body.classList.remove(Theme.LIGHT);
@@ -38,4 +39,5 @@ let getStatus = localStorage.getItem('theme');
 if (getStatus === Theme.DARK) {
   refs.body.classList.add(Theme.DARK);
   refs.themeButton.checked = true;
+  console.log(getStatus);
 }
