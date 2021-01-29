@@ -9,7 +9,7 @@ const Theme = {
 };
 
 refs.themeButton.addEventListener('change', toggleClass, makeCookie);
-
+console.log(refs.themeButton);
 function toggleClass(e) {
   let flag = refs.themeButton.checked;
 
